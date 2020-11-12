@@ -1,0 +1,373 @@
+.header {
+  background: black;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(
+      to right,
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta
+    )
+    1;
+  a {
+    color: white;
+  }
+  .menu {
+    right: 54px;
+    position: absolute;
+    float: right;
+  }
+  ul {
+    right: 105px;
+    position: absolute;
+    float: right;
+    top: 122px;
+  }
+}
+
+.rotate180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.face {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -80px;
+  border: none;
+  cursor: "";
+  transition: top 0.5s;
+  z-index: 1;
+  &:hover {
+    background-color: #ffe742;
+    border-radius: 45% 45% 0% 0%;
+    border: pink solid 3px;
+    top: -65px;
+  }
+}
+
+.faceopen {
+  display: block;
+  position: absolute;
+  right: 0;
+  border: none;
+  cursor: "";
+  top: -65px;
+  z-index: 1;
+  &:hover {
+    background-color: #ffe742;
+    border-radius: 45% 45% 0% 0%;
+    border: pink solid 3px;
+  }
+}
+
+.hair {
+  display: block;
+  position: absolute;
+  right: 60px;
+  top: 75px;
+  border: none;
+  cursor: "";
+  transition: top 0.9s, right 0.9s;
+  z-index: 1;
+}
+
+.hairopen {
+  display: block;
+  position: absolute;
+  border: none;
+  cursor: "";
+  right: 45px;
+  top: 339px;
+  transform: rotate(173deg);
+  animation-name: hairdown;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  z-index: 1;
+}
+
+.divlist {
+  right: 82px;
+  top: 129px;
+  position: absolute;
+  height: 244px;
+  transform: rotate(-4deg);
+}
+
+%list {
+  padding: 10px;
+  width: 220px;
+  height: 71px;
+  display: block;
+  background-color: #fffdec;
+  border: none;
+  border-radius: 20px;
+  transition-duration: 0.3s;
+  &:hover {
+    background-color: #ffe742;
+    border: pink solid 3px;
+  }
+}
+
+.list1 {
+  @extend %list;
+  top: 20px;
+  margin: -2px 0 9px -2px;
+  transform: rotate(6deg);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.15s;
+}
+.list1out {
+  @extend %list;
+  opacity: 0;
+  margin: -2px 0 9px -2px;
+  transform: rotate(6deg);
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.55s;
+}
+.list2 {
+  @extend %list;
+  margin: 7px 0px 0px -6px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+.list2out {
+  @extend %list;
+  margin: 7px 0px 0px -6px;
+  opacity: 0;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+.list3 {
+  @extend %list;
+  margin: 7px 0px 0px -4px;
+  transform: rotate(-5deg);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.55s;
+}
+.list3out {
+  @extend %list;
+  margin: 7px 0px 0px -4px;
+  transform: rotate(-5deg);
+  opacity: 0;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hairdown {
+  0% {
+    right: 60px;
+    top: 75px;
+    transform: rotate(180deg);
+  }
+  100% {
+    right: 45px;
+    top: 339px;
+    transform: rotate(173deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .face {
+    display: block;
+    position: absolute;
+    right: -38px;
+    top: -80px;
+    border: none;
+    cursor: "";
+    transition: top 0.5s;
+    z-index: 1;
+    &:hover {
+      background-color: #ffe742;
+      border-radius: 45% 45% 0% 0%;
+      border: pink solid 3px;
+      top: -65px;
+    }
+  }
+
+  .faceopen {
+    display: block;
+    position: absolute;
+    right: -38px;
+    border: none;
+    cursor: "";
+    top: -65px;
+    z-index: 1;
+    &:hover {
+      background-color: #ffe742;
+      border-radius: 45% 45% 0% 0%;
+      border: pink solid 3px;
+    }
+  }
+
+  .hair {
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 75px;
+    border: none;
+    cursor: "";
+    transition: top 0.9s, right 0.9s;
+    z-index: 1;
+  }
+
+  .hairopen {
+    display: block;
+    position: absolute;
+    border: none;
+    cursor: "";
+    right: 7px;
+    top: 339px;
+    transform: rotate(173deg);
+    animation-name: hairdown;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    z-index: 1;
+  }
+
+  @keyframes hairdown {
+    0% {
+      right: 22px;
+      top: 75px;
+      transform: rotate(180deg);
+    }
+    100% {
+      right: 7px;
+      top: 339px;
+      transform: rotate(173deg);
+    }
+  }
+  .divlist {
+    right: 48px;
+    top: 129px;
+    position: absolute;
+    height: 244px;
+    transform: rotate(-4deg);
+  }
+}
+
+@media screen and (max-width: 375px) {
+    .face {
+      display: block;
+      position: absolute;
+      right: -70px;
+      top: -80px;
+      border: none;
+      cursor: "";
+      transition: top 0.5s;
+      z-index: 1;
+      &:hover {
+        background-color: #ffe742;
+        border-radius: 45% 45% 0% 0%;
+        border: pink solid 3px;
+        top: -65px;
+      }
+    }
+  
+    .faceopen {
+      display: block;
+      position: absolute;
+      right: -70px;
+      border: none;
+      cursor: "";
+      top: -65px;
+      z-index: 1;
+      &:hover {
+        background-color: #ffe742;
+        border-radius: 45% 45% 0% 0%;
+        border: pink solid 3px;
+      }
+    }
+  
+    .hair {
+      display: block;
+      position: absolute;
+      right: -10px;
+      top: 75px;
+      border: none;
+      cursor: "";
+      transition: top 0.9s, right 0.9s;
+      z-index: 1;
+    }
+  
+    .hairopen {
+      display: block;
+      position: absolute;
+      border: none;
+      cursor: "";
+      right: -25px;
+      top: 339px;
+      transform: rotate(173deg);
+      animation-name: hairdown;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
+      z-index: 1;
+    }
+  
+    @keyframes hairdown {
+      0% {
+        right: -10px;
+        top: 75px;
+        transform: rotate(180deg);
+      }
+      100% {
+        right: -25px;
+        top: 339px;
+        transform: rotate(173deg);
+      }
+    }
+    .divlist {
+      right: 16px;
+      top: 129px;
+      position: absolute;
+      height: 244px;
+      transform: rotate(-4deg);
+    }
+  }
+  
