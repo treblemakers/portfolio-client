@@ -1,0 +1,26 @@
+.fromall {
+  margin: auto;
+  width: fit-content;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+}
+
+.infomation {
+  padding: 8px;
+  width: 500px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 375px) {
+  .fromall {
+    grid-template-columns: 350px;
+  }
+  .infomation {
+    width: 350px;
+  }
+}

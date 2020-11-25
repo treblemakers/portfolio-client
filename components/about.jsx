@@ -1,4 +1,5 @@
 import React from "react";
+import Stylecss from "../assets/styles/about.module.scss";
 
 const about = () => {
   return (
@@ -13,16 +14,7 @@ const about = () => {
           height: "100%",
         }}
       >
-        <div
-          style={{
-            margin: "auto",
-            width: "fit-content",
-            // backgroundColor: "blue",
-            margin: "50px auto",
-            display: "grid",
-            gridTemplateColumns: "350px 1fr",
-          }}
-        >
+        <div className={Stylecss.fromall}>
           <div style={{ display: "grid", gridTemplateRows: "1fr 95px" }}>
             <div>
               <img
@@ -46,7 +38,15 @@ const about = () => {
                 }}
               />
             </div>
-            <div style={{margin:"auto", padding: "13px",display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr" ,gridColumnGap:"5px"}}>
+            <div
+              style={{
+                margin: "auto",
+                padding: "13px",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+                gridColumnGap: "5px",
+              }}
+            >
               <img
                 style={{
                   width: "58px",
@@ -90,14 +90,7 @@ const about = () => {
             </div>
           </div>
 
-          <div
-            style={{
-              padding: "8px",
-              width: "500px",
-              display: "grid",
-              gridTemplateRows: "1fr 1fr",
-            }}
-          >
+          <div className={Stylecss.infomation}>
             <a>
               hi, my name is tee, I’ve just graduated in Computer Engineering
               from university of phayao. I enjoy creating things that live on
@@ -114,14 +107,21 @@ const about = () => {
                   width: "60px",
                 }}
                 src="https://res.cloudinary.com/djnasfo5s/image/upload/c_scale,w_92/v1605333222/Portfolio/link1_quuup9.png"
-                onClick={()=>window.open("https://www.facebook.com/ApisitPromyos/", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/ApisitPromyos/",
+                    "_blank"
+                  )
+                }
               />
               <img
                 style={{
                   width: "60px",
                 }}
                 src="https://res.cloudinary.com/djnasfo5s/image/upload/c_scale,w_92/v1605333222/Portfolio/link2_vdvz3p.png"
-                onClick={()=>window.open("https://github.com/treblemakers", "_blank")}
+                onClick={() =>
+                  window.open("https://github.com/treblemakers", "_blank")
+                }
               />
             </div>
           </div>
