@@ -1,7 +1,7 @@
 .fromall {
   margin: auto;
   width: fit-content;
-  margin: 50px auto;
+  margin: 50px auto 10px auto;
   display: grid;
   grid-template-columns: 350px 1fr;
 }
@@ -11,6 +11,125 @@
   width: 500px;
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+.topic {
+  color: #ff1d1d;
+  animation: topics;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+.topic2 {
+  color: #1d2eff;
+  animation: topics2;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+@keyframes topics {
+  0% {
+    color: #ff1d1d;
+  }
+  16% {
+    color: #ff1db9;
+  }
+  32% {
+    color: #d21dff;
+  }
+
+
+  48% {
+    color: #1d2eff;
+  }
+  64% {
+    color: #d21dff;
+  }
+  80% {
+    color: #ff1db9;
+  }
+  100% {
+    color: #ff1d1d;
+  }
+  
+}
+
+@keyframes topics2 {
+  0% {
+    color: #1d2eff;
+  }
+  16% {
+    color: #d21dff;
+  }
+  32% {
+    color: #ff1db9;
+  }
+
+
+  48% {
+    color: #ff1d1d;
+  }
+  64% {
+    color: #ff1db9;
+  }
+  80% {
+    color: #d21dff;
+  }
+  100% {
+    color: #1d2eff;
+  }
+  
+}
+
+.school {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  // background: linear-gradient(90deg, #ff008c  0%,#b14bff  100%) ;
+  border-radius: 50px;
+  color: white;
+  height: 75px;
+
+  box-shadow: 0px 0px 4px red;
+  animation: shadowschool;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+@keyframes shadowschool {
+  0% {
+    box-shadow: 0px 0px 2px rgb(255, 0, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 2px rgb(202, 1, 202);
+  }
+
+  100% {
+    box-shadow: 0px 0px 2px red;
+  }
+}
+
+.year {
+  color: white;
+  border-radius: 50%;
+  margin: auto;
+  display: grid;
+  text-align: center;
+  font-weight: 500;
+
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.fromgrade {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 75px;
+}
+
+.grade {
+  font-size: 25px;
+  font-weight: 500;
+  width: fit-content;
+  height: fit-content;
+  margin: auto 0;
 }
 
 @media screen and (max-width: 768px) {

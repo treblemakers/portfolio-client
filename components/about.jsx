@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import Stylecss from "../assets/styles/about.module.scss";
 
+import Edu from "./edu/edu";
+import Edures from "./edu/edures";
+
+import {useWindowSize} from './screen'
+
+
+
 const about = () => {
+  const size = useWindowSize();
   return (
     <>
       <div
@@ -126,6 +134,8 @@ const about = () => {
             </div>
           </div>
         </div>
+
+        {size.width > 375 ? <Edu /> : <Edures />}
       </div>
     </>
   );
