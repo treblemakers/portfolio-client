@@ -73,19 +73,27 @@ const Index = () => {
                 </div>
               </a>
             </Link>
-            <div
-              className={`${time ? Style.list2 : Style.list2out}`}
-              type="button"
+            <Link
+              to="Skill"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={() => toggle()}
             >
-              <div style={{ justifyContent: "space-between" }}>
-                <span>SKILLS</span>
-                <img
-                  style={{ float: "right" }}
-                  width={55}
-                  src="https://res.cloudinary.com/djnasfo5s/image/upload/v1604921545/Portfolio/skills_q9zk6b.png"
-                />
+              <div
+                className={`${time ? Style.list2 : Style.list2out}`}
+                type="button"
+              >
+                <div style={{ justifyContent: "space-between" }}>
+                  <span>SKILLS</span>
+                  <img
+                    style={{ float: "right" }}
+                    width={55}
+                    src="https://res.cloudinary.com/djnasfo5s/image/upload/v1604921545/Portfolio/skills_q9zk6b.png"
+                  />
+                </div>
               </div>
-            </div>
+            </Link>
 
             <div
               className={`${time ? Style.list3 : Style.list3out}`}

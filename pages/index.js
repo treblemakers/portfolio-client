@@ -12,18 +12,33 @@ import {
 
 import Nae from "../components/nav";
 import Drop from "../components/drop";
-import About from '../components/about';
+import About from "../components/about";
+import Skill from "../components/skill";
+
+import ScrollUpButton from "react-scroll-up-button";
+
+import { Icon } from "react-icons-kit";
+import { ic_expand_less } from "react-icons-kit/md/ic_expand_less";
 
 export default function Home() {
   return (
-    <div className={styles.container} style={{background:"#ffe742"}}>
+    <div className={styles.container} style={{ background: "#ffe742" }}>
       <Nae />
-      <Drop/>
-      <Element name="About" className="element" >
-            <About/>test 1
-        </Element>
+      <Drop />
+      <Element name="About" className="element">
+        <About />
+      </Element>
+      <Element name="Skill" className="element">
+        <Skill />
+      </Element>
+      <ScrollUpButton
+        ContainerClassName="AnyClassForContainer"
+        TransitionClassName="AnyClassForTransition"
+      >
 
-      
+          <Icon size={"25px"} icon={ic_expand_less} style={{margin:"auto"}}/>
+
+      </ScrollUpButton>
       555
     </div>
   );

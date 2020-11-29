@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css";
 
 html,
 body {
@@ -15,4 +16,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.AnyClassForContainer {
+  position: fixed;
+  right: -150px;
+  bottom: 20px;
+  transition: right 0.5s;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;  
+  background: black;
+  opacity: 0.25;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.AnyClassForTransition {
+  right: 20px;
+}
+
+.Totopbuttom {
+  
 }

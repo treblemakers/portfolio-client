@@ -1,0 +1,98 @@
+.logo {
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 0px 3px rgba(0 0 0 /25%);
+}
+
+.css {
+  background: linear-gradient(to bottom right, #3242d6 0%, #20ccff 100%);
+  @extend .logo;
+}
+
+.js {
+  background: linear-gradient(to bottom right, #ffa03f 0%, #f7e400 100%);
+  @extend .logo;
+}
+
+.html {
+  background: linear-gradient(to bottom right, #eb4818 0%, #f59b00 100%);
+  @extend .logo;
+}
+
+.next {
+  background: linear-gradient(to bottom right, #000000 0%, #525252 100%);
+  @extend .logo;
+}
+
+.react {
+  background: linear-gradient(to bottom right, #16d0fd 0%, #04f8ff 100%);
+  @extend .logo;
+}
+
+.apollo {
+  background: linear-gradient(to bottom right, #0f88de 0%, #a864b5 100%);
+  @extend .logo;
+}
+
+.graphql {
+  background: linear-gradient(to bottom right, #f748a2 0%, #f79092 100%);
+  @extend .logo;
+}
+
+.mongo {
+  background: linear-gradient(to bottom right, #00a028 0%, #bdf728 100%);
+  @extend .logo;
+}
+
+.mysql {
+  background: linear-gradient(to bottom right, #0044a5 10%, #f9c270 100%);
+  @extend .logo;
+}
+
+.ps {
+  background: linear-gradient(to bottom right, #0500de 0%, #00c7ff 100%);
+  @extend .logo;
+}
+
+.ai {
+  background: linear-gradient(to bottom right, #ec742a 0%, #ebbf45 100%);
+  @extend .logo;
+}
+
+.xd {
+  background: linear-gradient(to bottom right, #9817d6 0%, #c52f7e 100%);
+  @extend .logo;
+}
+
+.pr {
+  background: linear-gradient(to bottom right, #8430ba 0%, #dd83fd 100%);
+  @extend .logo;
+}
+
+.ae {
+  background: linear-gradient(to bottom right, #2e0c67 0%, #b426ef 100%);
+  @extend .logo;
+}
+
+.vs {
+  background: linear-gradient(to bottom right, #0db1ec 0%, #dba0ff 100%);
+  @extend .logo;
+}
+
+.listskill {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 425px) {
+  .listskill {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
