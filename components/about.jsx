@@ -135,7 +135,7 @@ const about = () => {
           </div>
         </div>
 
-        {size.width > 375 ? <Edu /> : <Edures />}
+        {size.width > 425 ? <Edu /> : <Edures />}
       </div>
     </>
   );
