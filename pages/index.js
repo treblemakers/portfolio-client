@@ -14,6 +14,7 @@ import Nae from "../components/nav";
 import Drop from "../components/drop";
 import About from "../components/about";
 import Skill from "../components/skill";
+import Contract from '../components/contract'
 
 import ScrollUpButton from "react-scroll-up-button";
 
@@ -31,6 +32,9 @@ export default function Home() {
       <Element name="Skill" className="element">
         <Skill />
       </Element>
+
+<Contract/>
+
       <ScrollUpButton
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"

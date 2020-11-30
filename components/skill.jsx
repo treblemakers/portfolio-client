@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Stylecss from "../assets/styles/skill.module.scss";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import {requestResetPassword} from './api/contract'
-
 import { useWindowSize } from "./screen";
 
 const skill = () => {
@@ -101,7 +99,7 @@ const skill = () => {
         "https://res.cloudinary.com/djnasfo5s/image/upload/c_scale,w_100/v1606925881/Portfolio/vscode_slps4v.png",
       css: Stylecss.vs,
       name: "VS Code",
-    }
+    },
   ];
   return (
     <>
@@ -116,51 +114,69 @@ const skill = () => {
         }}
       >
         <ScrollAnimation animateIn="fadeIn">
-        <div
-          style={{
-            backgroundColor: "",
-            display: "grid",
-            gridTemplateRows: "auto auto auto auto",
-            margin: "auto",
-          }}
-        >
-          <div style={{ margin: "20px auto", fontWeight: 600, fontSize: "35px" }}>
-            Technical skills
-          </div>
+          <div
+            style={{
+              backgroundColor: "",
+              display: "grid",
+              gridTemplateRows: "auto auto auto auto",
+              margin: "auto",
+            }}
+          >
+            <div
+              style={{ margin: "20px auto", fontWeight: 600, fontSize: "35px" }}
+            >
+              Technical skills
+            </div>
 
-          <div className={Stylecss.listskill}>
-            {tskill.map((prop) => (
-              <div style={{ display: "grid", width: "115px",gridTemplateRows: "115px 25px" }}>
-                <div className={prop.css}>
-                  <img src={prop.img} />
+            <div className={Stylecss.listskill}>
+              {tskill.map((prop) => (
+                <div
+                  key={prop.name}
+                  style={{
+                    display: "grid",
+                    width: "115px",
+                    gridTemplateRows: "115px 25px",
+                  }}
+                >
+                  <div className={prop.css}>
+                    <img src={prop.img} />
+                  </div>
+                  <span style={{ fontWeight: 600, margin: "auto" }}>
+                    {prop.name}
+                  </span>
                 </div>
-                <span style={{ fontWeight: 600, margin: "auto" }}>
-                  {prop.name}
-                </span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div style={{ margin: "20px auto", fontWeight: 600, fontSize: "35px" }}>
-          Software
-          </div>
+            <div
+              style={{ margin: "20px auto", fontWeight: 600, fontSize: "35px" }}
+            >
+              Software
+            </div>
 
-          <div className={Stylecss.listskill}>
-            {software.map((prop) => (
-              <div style={{ display: "grid",  width: "115px",gridTemplateRows: "115px 25px"}}>
-                <div className={prop.css}>
-                  <img src={prop.img} />
+            <div className={Stylecss.listskill}>
+              {software.map((prop) => (
+                <div
+                  key={prop.name}
+                  style={{
+                    display: "grid",
+                    width: "115px",
+                    gridTemplateRows: "115px 25px",
+                  }}
+                >
+                  <div className={prop.css}>
+                    <img src={prop.img} />
+                  </div>
+                  <span style={{ fontWeight: 600, margin: "auto" }}>
+                    {prop.name}
+                  </span>
                 </div>
-                <span style={{ fontWeight: 600, margin: "auto" }}>
-                  {prop.name}
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-
-        </div></ScrollAnimation>
+        </ScrollAnimation>
       </div>
-      <button onClick={requestResetPassword}>55555</button>
+      
     </>
   );
 };
