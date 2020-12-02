@@ -7,7 +7,7 @@ export default async function(req, res) {
 
   const content = {
     to: "merculies@outlook.com",
-    from: "ttnrsorawxunyyjdcs@awdrt.com",
+    from: "Contract@merculies.club",
     subject: `New Message From - ${email}`,
     text: message,
     html: `<p>${message}</p>`
