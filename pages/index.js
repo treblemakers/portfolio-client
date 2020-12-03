@@ -14,7 +14,7 @@ import Nae from "../components/nav";
 import Drop from "../components/drop";
 import About from "../components/about";
 import Skill from "../components/skill";
-import Contract from '../components/contract'
+import Contract from "../components/contract";
 
 import ScrollUpButton from "react-scroll-up-button";
 
@@ -33,17 +33,27 @@ export default function Home() {
         <Skill />
       </Element>
 
-<Contract/>
+      <Contract />
 
       <ScrollUpButton
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
       >
-
-          <Icon size={"25px"} icon={ic_expand_less} style={{margin:"auto"}}/>
-
+        <Icon size={"25px"} icon={ic_expand_less} style={{ margin: "auto" }} />
       </ScrollUpButton>
-      555
+      <footer
+        style={{
+          background: "black",
+          color: "white",
+          borderTop: "5px solid",
+          borderImage:
+            "linear-gradient(to right,red,yellow,lime,aqua, blue, magenta) 1",
+        }}
+      >
+        <div style={{ margin: "auto", width: "fit-content" }}>
+          this is footer
+        </div>
+      </footer>
     </div>
   );
 }
