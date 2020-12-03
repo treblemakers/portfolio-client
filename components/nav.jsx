@@ -107,7 +107,13 @@ const Index = () => {
                 </div>
               </div>
             </Link>
-
+            <Link
+              to="Contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={() => toggle()}
+            >
             <div
               className={`${time ? Style.list3 : Style.list3out}`}
               type="button"
@@ -126,6 +132,7 @@ const Index = () => {
                 />
               </div>
             </div>
+            </Link>
           </div>
           <img
             onClick={() => toggle()}

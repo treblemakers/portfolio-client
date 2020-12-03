@@ -32,9 +32,9 @@ export default function Home() {
       <Element name="Skill" className="element">
         <Skill />
       </Element>
-
+      <Element name="Contact" className="element">
       <Contract />
-
+      </Element>
       <ScrollUpButton
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
@@ -51,7 +51,7 @@ export default function Home() {
         }}
       >
         <div style={{ margin: "auto", width: "fit-content" }}>
-          this is footer
+          This is my footer 😘😘😘
         </div>
       </footer>
     </div>
