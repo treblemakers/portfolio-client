@@ -32,7 +32,7 @@ const Index = () => {
 
   return (
     <header className={Style.header}>
-      <a>Apisit promyos</a>
+      <a style={{ color: "white" }}>Apisit promyos</a>
       <div className={Style.menu}>
         <img
           onClick={() => toggle()}
@@ -64,7 +64,15 @@ const Index = () => {
                 type="button"
               >
                 <div style={{ justifyContent: "space-between" }}>
-                  <span style={{ color: "black" }}>ABOUT ME</span>
+                  <span
+                    style={{
+                      color: "black",
+                      fontSize: "26px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    ABOUT ME
+                  </span>
                   <img
                     style={{ float: "right" }}
                     width={55}
@@ -85,7 +93,12 @@ const Index = () => {
                 type="button"
               >
                 <div style={{ justifyContent: "space-between" }}>
-                  <span>SKILLS</span>
+                  <span style={{
+                      color: "black",
+                      fontSize: "26px",
+                      fontWeight: 700,
+                      marginLeft:"32px"
+                    }}>SKILLS</span>
                   <img
                     style={{ float: "right" }}
                     width={55}
@@ -100,7 +113,12 @@ const Index = () => {
               type="button"
             >
               <div style={{ justifyContent: "space-between" }}>
-                <span>CONTACT</span>
+                <span style={{
+                      color: "black",
+                      fontSize: "26px",
+                      fontWeight: 700,
+                      marginLeft:"8px"
+                    }}>CONTACT</span>
                 <img
                   style={{ float: "right" }}
                   width={55}
